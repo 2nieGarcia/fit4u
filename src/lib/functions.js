@@ -18,3 +18,5 @@ export const callFunction = async (functionName, data) => {
     throw new Error(error.message);
   }
 };
+
+//This code is useless, as there is no functions implemented for now
