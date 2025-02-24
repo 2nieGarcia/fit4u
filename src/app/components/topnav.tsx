@@ -5,7 +5,7 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Wardrobe', href: '#', current: false },
   { name: 'Planner', href: '#', current: false },
-  { name: 'Aboutus', href: '#', current: false },
+  { name: 'About', href: '/about', current: false },
 ];
 
 export default function TopNav() {

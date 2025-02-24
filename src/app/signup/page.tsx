@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { IoArrowBack } from "react-icons/io5";
 
 export default function SignUp() {
     const [email, setEmail] = useState("");
@@ -33,6 +35,13 @@ export default function SignUp() {
         <div className="">
             <div className="flex border-black border-t-2 min-h-[100vh]">
                 <div className="w-1/2 bg-white">
+
+                    <Link href="/">
+                        <button className="absolute top-6 left-6 text-black hover:text-gray-400 transition duration-200">
+                            <IoArrowBack size={40} />
+                        </button>
+                    </Link>
+
                     <div className="flex flex-col p-8 text-black">
                         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -87,9 +96,9 @@ export default function SignUp() {
                                 </form>
                                 <p className="mt-10 text-center text-sm text-gray-500">
                                     Already have an account?{" "}
-                                    <a href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                    <Link href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
                                         Sign in
-                                    </a>
+                                    </Link>
                                 </p>
                             </div>
                         </div>
