@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { IoArrowBack } from "react-icons/io5";
 import Image from "next/image";
 import { signUp } from "@/services/authServices";
 import { createUserProfile } from "@/services/userServices";
@@ -41,6 +43,13 @@ export default function SignUp() {
     <div className="">
       <div className="flex border-black border-t-2 min-h-[100vh]">
         <div className="w-1/2 bg-white">
+
+                    <Link href="/">
+                        <button className="absolute top-6 left-6 text-black hover:text-gray-400 transition duration-200">
+                            <IoArrowBack size={40} />
+                        </button>
+                    </Link>
+
           <div className="flex flex-col p-8 text-black">
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
               <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -93,25 +102,25 @@ export default function SignUp() {
                     )}
                   </div>
 
-                  <div>
-                    <button
-                      type="submit"
-                      className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                      Sign up
-                    </button>
-                  </div>
-                </form>
-                <p className="mt-10 text-center text-sm text-gray-500">
-                  Already have an account?{" "}
-                  <a href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                                    <div>
+                                        <button
+                                            type="submit"
+                                            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                        >
+                                            Sign up
+                                        </button>
+                                    </div>
+                                </form>
+                                <p className="mt-10 text-center text-sm text-gray-500">
+                                    Already have an account?{" "}
+                                    <Link href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                        Sign in
+                                    </Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         <div className="relative flex justify-center items-center w-1/2 bg-[#942D24]">
           <div className="relative flex items-center">
